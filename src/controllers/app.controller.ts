@@ -10,8 +10,6 @@ export class AppController {
   @Get()
   getHello(@Res() res: Response): Response<APIResponse> {
     const response = this.appService.getHello();
-    return res
-      .status(HttpStatus.OK)
-      .json({ status: 200, message: response, asdasd: 'asdass' });
+    return res.status(HttpStatus.OK).json({ status: 200, message: response });
   }
 }
