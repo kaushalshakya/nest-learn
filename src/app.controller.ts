@@ -1,7 +1,6 @@
 import { Controller, Get, HttpStatus, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Response } from 'express';
-import { APIResponse } from 'src/interfaces/apiResponse.interface';
 
 @Controller()
 export class AppController {
