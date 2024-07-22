@@ -8,8 +8,9 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(@Res() res: Response): Response<APIResponse> {
-    const response = this.appService.getHello();
+  async getHello(@Res() res: Response) {
+    const response = await this.appService.getHello();
+    console.log('response', response);
     return res.status(HttpStatus.OK).json({ status: 200, message: response });
   }
 }
